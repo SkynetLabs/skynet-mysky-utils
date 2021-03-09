@@ -1,7 +1,7 @@
 {
   "name": "skynet-interface-utils",
   "version": "0.1.0",
-  "description": "Skynet interface utilities",
+  "description": "Skynet base interface utilities",
   "private": true,
   "main": "dist/index.js",
   "scripts": {

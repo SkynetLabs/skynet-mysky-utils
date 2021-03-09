@@ -1,8 +1,6 @@
-export { Provider } from "./provider";
+export { createIframe } from "./utils";
 
 export type BridgeMetadata = {
-  minimumInterface: InterfaceSchema;
-
   relativeRouterUrl: string;
   routerName: string;
   routerW: number;
@@ -25,7 +23,7 @@ export type InterfaceSchema = {
 };
 
 export type ProviderMetadata = {
-  providerInterface: InterfaceSchema;
+  schema: InterfaceSchema;
 
   name: string;
   url: string;
@@ -36,7 +34,6 @@ export type ProviderMetadata = {
   connectorH: number;
 };
 
-export type SkappInfo = {
-  name: string;
-  domain: string;
+export class SkappInfo {
+  constructor(public name: string, public domain: string) {}
 };
