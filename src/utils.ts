@@ -18,7 +18,7 @@ export function createIframe(srcUrl: string, name: string): HTMLIFrameElement {
   return childFrame;
 }
 
-function ensureUrl(url: string): string {
+export function ensureUrl(url: string): string {
   return ensurePrefix(url, "https://");
 }
 

@@ -1,4 +1,15 @@
-export { createIframe } from "./utils";
+export {
+  emitStorageEvent,
+  listenForStorageEvent,
+  monitorOtherListener,
+} from "./storage_listener";
+export type {
+  CustomListenerOptions,
+  ListenForStorageEventResponse,
+  MonitorOtherListenerResponse,
+  PromiseController,
+} from "./storage_listener";
+export { createIframe, ensureUrl } from "./utils";
 
 export type BridgeMetadata = {
   relativeRouterUrl: string;
@@ -8,25 +19,28 @@ export type BridgeMetadata = {
 };
 
 export type InterfaceSchema = {
-  name: string,
-  version: string,
+  name: string;
+  version: string;
+  mysky?: boolean;
   methods: {
     [index: string]: {
       parameters?: Array<{
-        name: string,
-        type: string,
-        optional?: boolean,
-      }>,
-      returnType?: string,
-    },
-  },
+        name: string;
+        type: string;
+        optional?: boolean;
+      }>;
+      returnType?: string;
+    };
+  };
 };
+
+export class ProviderInfo {
+  constructor(public name: string, public domain: string) {}
+}
 
 export type ProviderMetadata = {
   schema: InterfaceSchema;
-
-  name: string;
-  url: string;
+  info: ProviderInfo;
 
   relativeConnectorPath: string;
   connectorName: string;
@@ -36,4 +50,4 @@ export type ProviderMetadata = {
 
 export class SkappInfo {
   constructor(public name: string, public domain: string) {}
-};
+}
