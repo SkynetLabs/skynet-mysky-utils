@@ -1,3 +1,5 @@
+export const defaultWindowTimeout = 10_000;
+
 export type CustomListenerOptions = {};
 
 export type ListenForStorageEventResponse = {

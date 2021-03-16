@@ -1,4 +1,5 @@
 export {
+  defaultWindowTimeout,
   emitStorageEvent,
   listenForStorageEvent,
   monitorOtherListener,
@@ -11,6 +12,9 @@ export type {
 } from "./storage_listener";
 export { createIframe, ensureUrl } from "./utils";
 
+export const defaultHandshakeMaxAttempts = 100;
+export const defaultHandshakeAttemptsInterval = 100;
+
 export type BridgeMetadata = {
   relativeRouterUrl: string;
   routerName: string;
@@ -18,10 +22,16 @@ export type BridgeMetadata = {
   routerH: number;
 };
 
-export type InterfaceSchema = {
+export type Schema = {
   name: string;
   version: string;
   mysky?: boolean;
+  defaultProviders?: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
   methods: {
     [index: string]: {
       parameters?: Array<{
@@ -39,7 +49,7 @@ export class ProviderInfo {
 }
 
 export type ProviderMetadata = {
-  schema: InterfaceSchema;
+  schema: Schema;
   info: ProviderInfo;
 
   relativeConnectorPath: string;
@@ -49,5 +59,5 @@ export type ProviderMetadata = {
 };
 
 export class SkappInfo {
-  constructor(public name: string, public domain: string) {}
+  constructor(public domain: string) {}
 }
