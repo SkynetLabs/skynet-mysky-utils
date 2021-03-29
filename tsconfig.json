@@ -8,7 +8,7 @@
     "strict": true,
 
     "outDir": "dist",
-    "types": ["node"],
+    "types": ["jest", "node"],
     "typeRoots": ["./types", "./node_modules/@types"]
   }
 }
