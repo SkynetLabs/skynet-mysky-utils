@@ -14,17 +14,19 @@ export {
   emitStorageEvent,
   listenForStorageEvent,
   monitorOtherListener,
+  PromiseController,
 } from "./storage_listener";
 export type {
   CustomListenerOptions,
   ListenForStorageEventResponse,
   MonitorOtherListenerResponse,
-  PromiseController,
 } from "./storage_listener";
-export { createIframe, ensureUrl } from "./utils";
+export { createFullScreenIframe, createIframe, ensureUrl } from "./utils";
 
 export const defaultHandshakeMaxAttempts = 100;
 export const defaultHandshakeAttemptsInterval = 100;
+
+export const errorWindowClosed = "window-closed";
 
 export class ProviderInfo {
   constructor(public name: string, public domain: string) {}

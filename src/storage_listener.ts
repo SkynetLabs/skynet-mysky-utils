@@ -12,6 +12,7 @@ export type MonitorOtherListenerResponse = {
   controller: PromiseController;
 };
 
+// TODO: Move to more general promise.ts file?
 export class PromiseController {
   cleanup() {}
 }
