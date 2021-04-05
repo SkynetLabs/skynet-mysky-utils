@@ -22,24 +22,10 @@ export type {
   MonitorOtherListenerResponse,
 } from "./storage_listener";
 export { createFullScreenIframe, createIframe, ensureUrl } from "./utils";
+export { errorWindowClosed, ErrorHolder, monitorWindowError } from "./window-listener";
 
 export const defaultHandshakeMaxAttempts = 100;
 export const defaultHandshakeAttemptsInterval = 100;
-
-export const errorWindowClosed = "window-closed";
-
-export class ProviderInfo {
-  constructor(public name: string, public domain: string) {}
-}
-
-export type ProviderMetadata = {
-  info: ProviderInfo;
-
-  relativeConnectorPath: string;
-  connectorName: string;
-  connectorW: number;
-  connectorH: number;
-};
 
 export class SkappInfo {
   constructor(public domain: string) {}
