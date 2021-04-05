@@ -1,5 +1,6 @@
 export class Permission {
   constructor(
+    public requestor: string,
     public path: string,
     public category: PermCategory,
     public permType: PermType,
