@@ -24,9 +24,12 @@ export type {
 export { createFullScreenIframe, createIframe, ensureUrl } from "./utils";
 export { errorWindowClosed, ErrorHolder, monitorWindowError } from "./window-listener";
 
+import { Permission } from "./permissions";
+
 export const defaultHandshakeMaxAttempts = 100;
 export const defaultHandshakeAttemptsInterval = 100;
 
-export class SkappInfo {
-  constructor(public domain: string) {}
+export type CheckPermissionsResponse = {
+  grantedPermissions: Permission[],
+  failedPermissions: Permission[],
 }
