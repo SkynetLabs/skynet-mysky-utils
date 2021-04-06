@@ -1,1 +1,3 @@
-# skynet-interface-utils
+# skynet-mysky-utils
+
+Skynet common MySky utilities.
