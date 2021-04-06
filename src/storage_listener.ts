@@ -1,3 +1,5 @@
+// TODO: Remove this file
+
 export const defaultWindowTimeout = 10_000;
 
 export type CustomListenerOptions = {};
