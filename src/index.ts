@@ -22,11 +22,11 @@ export type {
   MonitorOtherListenerResponse,
 } from "./storage_listener";
 export { createFullScreenIframe, createIframe, ensureUrl } from "./utils";
-export { errorWindowClosed, ErrorHolder, monitorWindowError } from "./window-listener";
+export { dispatchedErrorEvent, errorWindowClosed, monitorWindowError } from "./window-listener";
 
 import { Permission } from "./permissions";
 
-export const defaultHandshakeMaxAttempts = 100;
+export const defaultHandshakeMaxAttempts = 150;
 export const defaultHandshakeAttemptsInterval = 100;
 
 export type CheckPermissionsResponse = {

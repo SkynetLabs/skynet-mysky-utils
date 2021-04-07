@@ -27,7 +27,20 @@ export function createFullScreenIframe(srcUrl: string, name: string): HTMLIFrame
   const childFrame = document.createElement("iframe")!;
   childFrame.src = srcUrl;
   childFrame.name = name;
-  childFrame.style.content = "position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;";
+
+  // Set properties to make the iframe full-screen.
+  childFrame.style.position = "fixed";
+  childFrame.style.top = "0";
+  childFrame.style.left = "0";
+  childFrame.style.bottom = "0";
+  childFrame.style.right = "0";
+  childFrame.style.width = "100%";
+  childFrame.style.height = "100%";
+  childFrame.style.border = "none";
+  childFrame.style.margin = "0";
+  childFrame.style.padding = "0";
+  childFrame.style.overflow = "hidden";
+  childFrame.style.zIndex = "999999";
 
   // Set sandbox permissions.
   // TODO: Enable sandboxing?

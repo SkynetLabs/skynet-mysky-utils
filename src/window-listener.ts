@@ -1,31 +1,31 @@
 import { PromiseController } from "./storage_listener";
 
 export const errorWindowClosed = "window-closed";
-
-export class ErrorHolder {
-  error = "";
-}
+export const dispatchedErrorEvent = "catchError";
 
 /**
  * Checks if there has been an error from the window on an interval.
  */
-export function monitorWindowError(errorHolder: ErrorHolder): { promise: Promise<void>; controller: PromiseController } {
-  const pingInterval = 100;
+export function monitorWindowError(): { promise: Promise<void>; controller: PromiseController } {
   const controller = new PromiseController();
+  const abortController = new AbortController();
 
   const promise: Promise<void> = new Promise((resolve, reject) => {
-    const pingFunc = () => {
-      if (errorHolder.error !== "") {
-        reject(errorHolder.error);
-      }
-    };
+    const handleEvent = function (e: any) {
+      window.removeEventListener(dispatchedErrorEvent, handleEvent);
 
-    const intervalId = window.setInterval(pingFunc, pingInterval);
+      const err = e.detail;
+      reject(err);
+    };
+    // @ts-expect-error doesn't recognize signal option.
+    window.addEventListener(dispatchedErrorEvent, handleEvent, {
+      signal: abortController.signal,
+    });
 
     // Initialize cleanup function.
     controller.cleanup = () => {
-      // Clear the interval.
-      window.clearInterval(intervalId);
+      // Abort the event listener.
+      abortController.abort();
       // Cleanup the promise.
       resolve();
     };
