@@ -6,7 +6,10 @@ export const dispatchedErrorEvent = "catchError";
 /**
  * Checks if there has been an error from the window on an interval.
  */
-export function monitorWindowError(): { promise: Promise<void>; controller: PromiseController } {
+export function monitorWindowError(): {
+  promise: Promise<void>;
+  controller: PromiseController;
+} {
   const controller = new PromiseController();
   const abortController = new AbortController();
 

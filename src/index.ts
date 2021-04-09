@@ -7,7 +7,7 @@ export {
   PermHidden,
   PermLegacySkyID,
   PermRead,
-  PermWrite
+  PermWrite,
 } from "./permissions";
 export {
   defaultWindowTimeout,
@@ -22,7 +22,11 @@ export type {
   MonitorOtherListenerResponse,
 } from "./storage_listener";
 export { createFullScreenIframe, createIframe, ensureUrl } from "./utils";
-export { dispatchedErrorEvent, errorWindowClosed, monitorWindowError } from "./window-listener";
+export {
+  dispatchedErrorEvent,
+  errorWindowClosed,
+  monitorWindowError,
+} from "./window-listener";
 
 import { Permission } from "./permissions";
 
@@ -30,6 +34,6 @@ export const defaultHandshakeMaxAttempts = 150;
 export const defaultHandshakeAttemptsInterval = 100;
 
 export type CheckPermissionsResponse = {
-  grantedPermissions: Permission[],
-  failedPermissions: Permission[],
-}
+  grantedPermissions: Permission[];
+  failedPermissions: Permission[];
+};

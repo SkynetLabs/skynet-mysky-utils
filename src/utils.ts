@@ -21,7 +21,10 @@ export function createIframe(srcUrl: string, name: string): HTMLIFrameElement {
 /**
  * Creates a full-screen iframe with the given src and adds it to the page.
  */
-export function createFullScreenIframe(srcUrl: string, name: string): HTMLIFrameElement {
+export function createFullScreenIframe(
+  srcUrl: string,
+  name: string
+): HTMLIFrameElement {
   srcUrl = ensureUrl(srcUrl);
 
   const childFrame = document.createElement("iframe")!;

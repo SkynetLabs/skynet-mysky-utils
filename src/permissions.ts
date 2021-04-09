@@ -3,7 +3,7 @@ export class Permission {
     public requestor: string,
     public path: string,
     public category: PermCategory,
-    public permType: PermType,
+    public permType: PermType
   ) {
     if (typeof category !== "number" || !(category in PermCategory)) {
       throw new Error(`Invalid 'category' enum value ${category}`);
@@ -12,7 +12,7 @@ export class Permission {
       throw new Error(`Invalid 'permType' enum value ${permType}`);
     }
   }
-};
+}
 
 // Define category constants for non-TS users.
 export const PermDiscoverable = 1;
