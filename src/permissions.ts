@@ -40,6 +40,13 @@ export enum PermType {
   Write = PermWrite,
 }
 
+/**
+ * Converts the given permission category to a human-readable string.
+ *
+ * @param category - The given category.
+ * @returns - The string.
+ * @throws - Will throw if the category is not valid.
+ */
 export function permCategoryToString(category: PermCategory): string {
   if (category === PermCategory.Discoverable) {
     return "Discoverable";
@@ -52,6 +59,13 @@ export function permCategoryToString(category: PermCategory): string {
   }
 }
 
+/**
+ * Converts the given permission type to a human-readable string.
+ *
+ * @param permType - The given type.
+ * @returns - The string.
+ * @throws - Will throw if the type is not valid.
+ */
 export function permTypeToString(permType: PermType): string {
   if (permType === PermType.Read) {
     return "Read";

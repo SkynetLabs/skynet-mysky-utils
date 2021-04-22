@@ -13,18 +13,6 @@ export {
   PermWrite,
 } from "./permissions";
 export {
-  defaultWindowTimeout,
-  emitStorageEvent,
-  listenForStorageEvent,
-  monitorOtherListener,
-  PromiseController,
-} from "./storage_listener";
-export type {
-  CustomListenerOptions,
-  ListenForStorageEventResponse,
-  MonitorOtherListenerResponse,
-} from "./storage_listener";
-export {
   createFullScreenIframe,
   createIframe,
   ensureUrl,

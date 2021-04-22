@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "lint": "npm run lint:tsc && npm run lint:eslint",
     "lint:eslint": "eslint --ext .ts src",
     "lint:tsc": "tsc",
     "test": "jest"

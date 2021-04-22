@@ -1,7 +1,11 @@
-import { PromiseController } from "./storage_listener";
-
 export const errorWindowClosed = "window-closed";
 export const dispatchedErrorEvent = "catchError";
+
+export class PromiseController {
+  cleanup() {
+    // Empty until implemented in monitorWindowError.
+  }
+}
 
 /**
  * Checks if there has been an error from the window on an interval.
