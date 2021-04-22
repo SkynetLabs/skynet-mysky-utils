@@ -58,6 +58,31 @@ export function ensureUrl(url: string): string {
   return ensurePrefix(url, "https://");
 }
 
+/**
+ * Removes a suffix from the end of the string.
+ *
+ * @param str - The string to process.
+ * @param suffix - The suffix to remove.
+ * @param [limit] - Maximum amount of times to trim. No limit by default.
+ * @returns - The processed string.
+ */
+export function trimSuffix(
+  str: string,
+  suffix: string,
+  limit?: number
+): string {
+  while (str.endsWith(suffix)) {
+    if (limit !== undefined && limit <= 0) {
+      break;
+    }
+    str = str.substring(0, str.length - suffix.length);
+    if (limit) {
+      limit -= 1;
+    }
+  }
+  return str;
+}
+
 function ensurePrefix(s: string, prefix: string): string {
   if (!s.startsWith(prefix)) {
     s = `${prefix}${s}`;

@@ -1,7 +1,10 @@
+export { getPathDomain, getParentPath, sanitizePath } from "./paths";
 export {
   Permission,
   PermCategory,
   PermType,
+  permCategoryToString,
+  permTypeToString,
   // Constants
   PermDiscoverable,
   PermHidden,
@@ -21,7 +24,12 @@ export type {
   ListenForStorageEventResponse,
   MonitorOtherListenerResponse,
 } from "./storage_listener";
-export { createFullScreenIframe, createIframe, ensureUrl } from "./utils";
+export {
+  createFullScreenIframe,
+  createIframe,
+  ensureUrl,
+  trimSuffix,
+} from "./utils";
 export {
   dispatchedErrorEvent,
   errorWindowClosed,

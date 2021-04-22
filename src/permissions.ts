@@ -39,3 +39,25 @@ export enum PermType {
   Read = PermRead,
   Write = PermWrite,
 }
+
+export function permCategoryToString(category: PermCategory): string {
+  if (category === PermCategory.Discoverable) {
+    return "Discoverable";
+  } else if (category === PermCategory.Hidden) {
+    return "Hidden";
+  } else if (category === PermCategory.LegacySkyID) {
+    return "LegacySkyID";
+  } else {
+    throw new Error(`Invalid permission category ${category}`);
+  }
+}
+
+export function permTypeToString(permType: PermType): string {
+  if (permType === PermType.Read) {
+    return "Read";
+  } else if (permType === PermType.Write) {
+    return "Write";
+  } else {
+    throw new Error(`Invalid permission type ${permType}`);
+  }
+}
