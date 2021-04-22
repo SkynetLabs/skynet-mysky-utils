@@ -4,7 +4,13 @@
 
 ### Added
 
--
+- Path helpers: `getPathDomain`, `getParentPath`, `sanitizePath`
+- String helper: `trimSuffix`
+- Permissions helpers: `permCategoryToString`, `permTypeToString`
+
+### Removed
+
+- Storage listener helpers
 
 ## [0.1.2]
 
