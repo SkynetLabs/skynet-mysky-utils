@@ -33,3 +33,12 @@ export type CheckPermissionsResponse = {
   grantedPermissions: Permission[];
   failedPermissions: Permission[];
 };
+
+/**
+ * Custom options for mySky.userID().
+ *
+ * @property [legacyAppID] - Deprecated. The legacy app ID. For compatibility with SkyID.
+ */
+export type CustomUserIDOptions = {
+  legacyAppID?: string;
+};
