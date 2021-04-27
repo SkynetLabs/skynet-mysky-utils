@@ -1,6 +1,6 @@
 {
   "name": "skynet-mysky-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Skynet common MySky utilities",
   "main": "dist/index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "lint": "npm run lint:tsc && npm run lint:eslint",
     "lint:eslint": "eslint --ext .ts src",
     "lint:tsc": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "jest": {
