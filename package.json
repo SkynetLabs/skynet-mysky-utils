@@ -1,6 +1,6 @@
 {
   "name": "skynet-mysky-utils",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Skynet common MySky utilities",
   "main": "dist/index.js",
   "scripts": {

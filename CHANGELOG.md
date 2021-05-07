@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.3]
+
+### Added
+
+- `removeAdjacentChars` function.
+
 ## [0.2.2]
 
 ### Added
