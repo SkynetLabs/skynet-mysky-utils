@@ -16,6 +16,7 @@ export {
   createFullScreenIframe,
   createIframe,
   ensureUrl,
+  removeAdjacentChars,
   trimSuffix,
 } from "./utils";
 export {

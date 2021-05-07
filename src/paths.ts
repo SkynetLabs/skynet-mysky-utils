@@ -1,4 +1,4 @@
-import { trimSuffix } from "./utils";
+import { removeAdjacentChars, trimSuffix } from "./utils";
 
 /**
  * Gets the root path domain for the given path.
@@ -40,15 +40,7 @@ export function sanitizePath(path: string): string {
   path = trimSuffix(path, "/");
 
   // Remove duplicate adjacent slashes.
-  const pathArray = Array.from(path);
-  for (let i = 0; i < pathArray.length - 1; ) {
-    if (pathArray[i] === "/" && pathArray[i + 1] === "/") {
-      pathArray.splice(i, 1);
-    } else {
-      i++;
-    }
-  }
-  path = pathArray.join("");
+  path = removeAdjacentChars(path, "/");
 
   return path;
 }

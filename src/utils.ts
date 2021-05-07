@@ -58,6 +58,18 @@ export function ensureUrl(url: string): string {
   return ensurePrefix(url, "https://");
 }
 
+export function removeAdjacentChars(str: string, char: string): string {
+  const pathArray = Array.from(str);
+  for (let i = 0; i < pathArray.length - 1; ) {
+    if (pathArray[i] === char && pathArray[i + 1] === char) {
+      pathArray.splice(i, 1);
+    } else {
+      i++;
+    }
+  }
+  return pathArray.join("");
+}
+
 /**
  * Removes a suffix from the end of the string.
  *
