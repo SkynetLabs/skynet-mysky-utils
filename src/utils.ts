@@ -84,7 +84,7 @@ export function ensureUrl(url: string): string {
  * Removes duplicate adjacent characters from the given string.
  *
  * @param str - The given string.
- * @param char - The character to remove dupliates of.
+ * @param char - The character to remove duplicates of.
  * @returns - The string without duplicate adjacent characters.
  */
 export function removeAdjacentChars(str: string, char: string): string {
