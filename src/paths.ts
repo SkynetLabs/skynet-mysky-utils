@@ -56,6 +56,14 @@ export function getParentPath(path: string): string | null {
  * @returns - The sanitized path.
  */
 export function sanitizePath(path: string): string | null {
+  // Trim the path.
+  path = path.trim();
+
+  // Paths starting with a slash are invalid.
+  if (path.startsWith("/")) {
+    return null;
+  }
+
   // Remove trailing slashes.
   path = trimSuffix(path, "/");
 

@@ -22,7 +22,7 @@ describe("parentPath", () => {
     ["APP.hns///Path///file.json", "app.hns/Path"],
     ["app.hns//path", "app.hns"],
     ["app.hns/path/", "app.hns"],
-    ["/app.hns/path/", "/app.hns"],
+    ["/app.hns/path/", null],
     ["app.hns//", null],
     ["//app.hns//", null],
     ["//", null],
@@ -38,9 +38,11 @@ describe("parentPath", () => {
 describe("sanitizePath", () => {
   const paths: Array<[string, string | null]> = [
     ["test.hns", "test.hns"],
+    [" test.hns  ", "test.hns"],
     ["path.hns", "path.hns"],
     ["Path.HNS", "path.hns"],
-    ["//path/file/", "/path/file"],
+    ["//path/file/", null],
+    ["\t//path/file/", null],
     ["path.hns//file.json//", "path.hns/file.json"],
     ["PATH.Hns//File.json//", "path.hns/File.json"],
     ["//", null],
