@@ -49,8 +49,11 @@ describe("sanitizePath", () => {
     ["", null],
   ];
 
-  it.each(paths)("path '%s' should be sanitized to '%s'", (path, sanitizedPath) => {
-    const receivedPath = sanitizePath(path);
-    expect(receivedPath).toEqual(sanitizedPath);
-  });
+  it.each(paths)(
+    "path '%s' should be sanitized to '%s'",
+    (path, sanitizedPath) => {
+      const receivedPath = sanitizePath(path);
+      expect(receivedPath).toEqual(sanitizedPath);
+    }
+  );
 });
