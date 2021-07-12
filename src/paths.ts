@@ -13,8 +13,9 @@ export function getPathDomain(path: string): string | null {
     return null;
   }
 
-  // Extract the domain.
-  const domain = sanitizedPath.split("/")[0];
+  // Split the string and extract the domain. If there are no slashes, the first
+  // element will contain the entire string.
+  const [domain] = sanitizedPath.split("/");
   if (domain === "") {
     return null;
   }

@@ -2,6 +2,7 @@ import { getParentPath, getPathDomain, sanitizePath } from "./paths";
 
 describe("getPathDomain", () => {
   const paths: Array<[string, string | null]> = [
+    ["path.hns", "path.hns"],
     ["path.hns/path", "path.hns"],
     ["path.hns//path/path/", "path.hns"],
     ["PATH.Hns//Path/path/", "path.hns"],
