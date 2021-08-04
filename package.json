@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SkynetHQ/skynet-mysky-utils.git"
+    "url": "git+https://github.com/SkynetLabs/skynet-mysky-utils.git"
   },
   "keywords": [
     "sia",
@@ -38,9 +38,9 @@
   "author": "Marcin Swieczkowski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SkynetHQ/skynet-mysky-utils/issues"
+    "url": "https://github.com/SkynetLabs/skynet-mysky-utils/issues"
   },
-  "homepage": "https://github.com/SkynetHQ/skynet-mysky-utils#readme",
+  "homepage": "https://github.com/SkynetLabs/skynet-mysky-utils#readme",
   "dependencies": {
     "post-me": "^0.4.5"
   },

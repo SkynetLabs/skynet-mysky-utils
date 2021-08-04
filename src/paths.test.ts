@@ -41,6 +41,7 @@ describe("sanitizePath", () => {
     ["test.hns", "test.hns"],
     [" test.hns  ", "test.hns"],
     ["path.hns", "path.hns"],
+    ["path.hns/", "path.hns"],
     ["Path.HNS", "path.hns"],
     ["//path/file/", null],
     ["\t//path/file/", null],

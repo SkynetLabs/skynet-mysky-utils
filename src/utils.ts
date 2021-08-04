@@ -17,11 +17,6 @@ export function createIframe(srcUrl: string, name: string): HTMLIFrameElement {
   childFrame.name = name;
   childFrame.style.display = "none";
 
-  // Set sandbox permissions.
-  // TODO: Enable sandboxing?
-  // childFrame.sandbox.add("allow-same-origin");
-  // childFrame.sandbox.add("allow-scripts");
-
   document.body.appendChild(childFrame);
   return childFrame;
 }
@@ -60,11 +55,6 @@ export function createFullScreenIframe(
   childFrame.style.padding = "0";
   childFrame.style.overflow = "hidden";
   childFrame.style.zIndex = "999999";
-
-  // Set sandbox permissions.
-  // TODO: Enable sandboxing?
-  // childFrame.sandbox.add("allow-same-origin");
-  // childFrame.sandbox.add("allow-scripts");
 
   document.body.appendChild(childFrame);
   return childFrame;
