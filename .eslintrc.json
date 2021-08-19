@@ -3,6 +3,7 @@
   "plugins": ["jsdoc", "@typescript-eslint"],
   "parserOptions": {
     "ecmaVersion": 2020,
+    "project": ["tsconfig.json"],
     "sourceType": "module"
   },
   "env": {
@@ -18,7 +19,9 @@
     "no-bitwise": 1,
 
     "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-floating-promises": 1,
     "@typescript-eslint/no-non-null-assertion": 1,
+    "@typescript-eslint/require-await": 1,
 
     "jsdoc/require-description": 1,
     "jsdoc/require-param-type": 0,
