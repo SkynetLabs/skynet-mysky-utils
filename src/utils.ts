@@ -1,3 +1,5 @@
+// TODO: Move some of these to skynet-utils.
+
 /**
  * Creates an invisible iframe with the given src and adds it to the page.
  *
