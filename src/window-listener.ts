@@ -26,7 +26,6 @@ export function monitorWindowError(): {
       const err = (<CustomEvent>event).detail;
       reject(err);
     };
-    // @ts-expect-error doesn't recognize signal option.
     window.addEventListener(dispatchedErrorEvent, handleEvent, {
       signal: abortController.signal,
     });
