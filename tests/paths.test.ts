@@ -1,4 +1,4 @@
-import { getParentPath, getPathDomain, sanitizePath } from "./paths";
+import { getParentPath, getPathDomain, sanitizePath } from "../src/paths";
 
 describe("getPathDomain", () => {
   const paths: Array<[string, string | null]> = [
