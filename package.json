@@ -21,9 +21,6 @@
       "prettier --write"
     ]
   },
-  "jest": {
-    "rootDir": "src"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SkynetLabs/skynet-mysky-utils.git"
@@ -45,8 +42,8 @@
     "post-me": "^0.4.5"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-typescript": "^7.13.0",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
@@ -54,10 +51,11 @@
     "eslint": "^8.12.0",
     "eslint-plugin-jsdoc": "^39.1.0",
     "husky": "^7.0.1",
-    "jest": "^27.5.1",
+    "jest": "^28.0.3",
+    "jest-environment-jsdom": "^28.0.2",
     "lint-staged": "^12.3.7",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.2"
+    "typescript": "^4.6.4"
   }
 }

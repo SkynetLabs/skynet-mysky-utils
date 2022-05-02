@@ -1,4 +1,4 @@
-import { ensureUrl } from "./utils";
+import { ensureUrl } from "../src/utils";
 
 describe("ensureUrl", () => {
   const cases = [

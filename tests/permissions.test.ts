@@ -1,4 +1,4 @@
-import { Permission, PermHidden, PermWrite } from "./index";
+import { Permission, PermHidden, PermWrite } from "../src/index";
 
 describe("new Permission()", () => {
   it("Should reject invalid enum values", () => {
