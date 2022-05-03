@@ -9,7 +9,7 @@
     "lint:eslint": "eslint --ext .ts src --max-warnings 0",
     "lint:tsc": "tsc",
     "prepare": "husky install",
-    "prepublishOnly": "npm i && npm run build",
+    "prepublishOnly": "npm ci && npm run build",
     "test": "jest"
   },
   "lint-staged": {
